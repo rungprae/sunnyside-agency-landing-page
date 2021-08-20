@@ -14,16 +14,66 @@ body {
 }
 /* navbar */
 .navbar {
-  height: 80px;
-  padding: 0 24px;
+  padding: 35px 24px;
+  height: 90px;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  background-size: 330px 305px;
+  position: relative;
+}
+.show .navbar-nav:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 25px solid hsl(0, 0%, 100%);
+  right: 0;
+  top: -7%;
+}
+.navbar-collapse {
+  padding-top: 50px;
+  transition: none;
+}
+
+.nav-link {
+  color: hsl(232, 10%, 55%) !important;
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 40px;
+}
+.nav-link.about {
+  margin-top: 45px;
+}
+.nav-link.contact {
+  color: #000000 !important;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: hsl(51, 100%, 49%);
+  width: 142px;
+  height: 56px;
+  border-radius: 40px;
+  margin: 30px 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbar-brand {
   height: 21px;
   padding: 0 !important;
 }
 .container-fluid {
-  padding: 0 !important;
+  padding: 0;
 }
+
 .navbar-toggler {
   border: none;
   padding: 0;
@@ -42,6 +92,7 @@ body {
   width: unset;
   height: unset;
 }
+
 /* branding */
 .container-fluid.branding {
   background-image: url(./images/mobile/image-header.jpg);
@@ -69,6 +120,7 @@ body {
   height: 115px;
   margin-top: 58px;
 }
+
 /* information */
 .col-12.info.image.egg {
   padding: 0;
@@ -132,7 +184,7 @@ body {
   display: block;
   border: 4px solid hsl(51deg 100% 49% / 36%);
   border-radius: 50px;
-  width: 125px;
+  width: 120px;
   position: absolute;
   right: -7%;
   top: 60%;
@@ -155,7 +207,7 @@ body {
   display: block;
   border: 4px solid hsl(7deg 99% 70% / 22%);
   border-radius: 50px;
-  width: 125px;
+  width: 120px;
   position: absolute;
   z-index: -2;
   left: -7%;
@@ -199,7 +251,7 @@ body {
 .card-heading {
   text-align: center;
   font-family: "Fraunces", serif;
-  font-size: 15px;
+  font-size: 18px;
   color: hsl(210, 4%, 67%);
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -245,9 +297,29 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.image-card-food {
+.image-card-food.milkbottles {
+  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
   width: 187.5px;
   height: 188px;
+  background-size: cover;
+}
+.image-card-food.orange {
+  background-image: url(./images/mobile/image-gallery-orange.jpg);
+  width: 187.5px;
+  height: 188px;
+  background-size: cover;
+}
+.image-card-food.cone {
+  background-image: url(./images/mobile/image-gallery-cone.jpg);
+  width: 187.5px;
+  height: 188px;
+  background-size: cover;
+}
+.image-card-food.sugar {
+  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+  width: 187.5px;
+  height: 188px;
+  background-size: cover;
 }
 /* footer */
 .container-fluid.footer {
@@ -262,6 +334,7 @@ body {
 
 .footer-logo {
   color: hsl(167, 40%, 24%);
+  font-size: 20px;
 }
 .more-info {
   color: hsl(168, 34%, 41%);
@@ -299,9 +372,12 @@ body {
 /* desktop */
 @media (min-width: 1440px) {
   /* navbar */
+  .fixed-top {
+    top: 0;
+  }
   .navbar {
     padding: 0 46px 0 40px;
-    height: 122px;
+    height: 128px;
   }
   .navbar-brand {
     height: 30px;
@@ -311,6 +387,10 @@ body {
   }
   .navbar-nav {
     align-items: center;
+    background-color: transparent;
+  }
+  .navbar-nav:before {
+    display: none;
   }
   .nav-link {
     font-size: 15px;
@@ -325,6 +405,7 @@ body {
   .nav-link.about {
     width: 73px;
     height: 58px;
+    margin-top: 0;
   }
   .nav-link.about:hover {
     color: hsl(0, 0%, 100%);
@@ -335,6 +416,7 @@ body {
   .nav-link.services {
     width: 95px;
     height: 58px;
+    margin-top: 0;
   }
   .nav-link.services:hover {
     color: hsl(0, 0%, 100%);
@@ -345,6 +427,7 @@ body {
   .nav-link.projects {
     width: 90px;
     height: 58px;
+    margin-top: 0;
   }
   .nav-link.projects:hover {
     color: hsl(0, 0%, 100%);
@@ -364,6 +447,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 40px;
   }
   .nav-link.contact:hover {
     color: hsl(0, 0%, 100%);
@@ -377,45 +463,66 @@ body {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 0;
   }
+  .navbar-collapse {
+    padding-top: 0;
+  }
   /* branding */
   .container-fluid.branding {
     background-image: url(./images/desktop/image-header.jpg);
     width: 100%;
     height: 800px;
-    background-size: cover;
+    background-size: 100% 100%;
     display: flex;
     justify-content: flex-start;
   }
   .branding {
     font-size: 40px;
-    padding-top: 206px;
+    padding-top: 100px;
   }
   .arrow-down {
     margin-top: 100px;
   }
   /* information */
+  .row.align-items-start.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .row.info {
     margin: 0;
   }
   .col-xl-6.info.image.egg {
     padding: 0;
     background-image: url(./images/desktop/image-transform.jpg);
+    width: 50%;
     height: 600px;
-    width: 720px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    order: 2;
+  }
+  .col-xl-6.info.transform {
+    order: 1;
+    width: 50%;
+    height: 600px;
+  }
+
+  .col-xl-6.info.stand-out {
+    order: 4;
+    width: 50%;
+    height: 600px;
   }
   .col-xl-6.info.image.cup {
     padding: 0;
     background-image: url(./images/desktop/image-stand-out.jpg);
+    width: 50%;
     height: 600px;
-    width: 720px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    order: 3;
   }
   .col-xl-6.info {
-    height: 600px;
     width: 720px;
+    height: 600px;
   }
   .info-heading.transform {
     font-size: 30px;
@@ -444,10 +551,10 @@ body {
     margin-bottom: 50px;
   }
   .btn.transform {
-    right: -3%;
+    right: -1%;
   }
   .btn.stand-out {
-    right: -2%;
+    right: -1%;
   }
   .col-xl-6.info.bg {
     padding: 0 190px 60px;
@@ -459,24 +566,81 @@ body {
   .info-content.photography {
     text-align: center;
   }
-  .info-content.graphic{
+  .info-content.graphic {
     text-align: center;
   }
   .col-xl-6.graphic {
     background-image: url(./images/desktop/image-graphic-design.jpg);
-    width: 720px;
+    width: 50%;
     height: 600px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     color: hsl(167, 40%, 24%);
+    order: 5;
   }
-
   .col-xl-6.photography {
     background-image: url(./images/desktop/image-photography.jpg);
-    width: 720px;
+    width: 50%;
     height: 600px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     color: hsl(198, 62%, 26%);
+    order: 6;
+  }
+  /* card */
+  .card-client {
+    display: flex;
+  }
+  .card {
+    padding: 0 20px 0 0;
+  }
+  .card-text.middle {
+    padding: 0 38px 0;
+  }
+  .card-info {
+    padding: 162px 120px 162px;
+  }
+  .card-img-top {
+    margin-top: 82px;
+  }
+  .card-text {
+    margin-top: 65px;
+  }
+  .name {
+    margin-top: 65px;
+  }
+}
+/* image-card */
+@media (min-width: 1440px) {
+  .image-card {
+    width: 100%;
+  }
+  .image-card-food.milkbottles {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    width: 25%;
+    height: 447px;
+    background-size: 100% 100%;
+  }
+  .image-card-food.orange {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+    width: 25%;
+    height: 447px;
+    background-size: 100% 100%;
+  }
+  .image-card-food.cone {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+    width: 25%;
+    height: 447px;
+    background-size: 100% 100%;
+  }
+  .image-card-food.sugar {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    width: 25%;
+    height: 447px;
+    background-size: 100% 100%;
+  }
+  /* footer */
+  .more-info.services {
+    margin: 0 60px;
   }
 }

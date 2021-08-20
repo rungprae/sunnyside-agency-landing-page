@@ -33,7 +33,7 @@
         class="navbar navbar-expand-lg navbar-light fixed-top"
         style="background-color: #3ebfff"
       >
-        <div class="container-fluid">
+        <div class="container-fluid nav">
           <img class="navbar-brand" src="./images/logo.svg" alt="logo" />
           <button
             class="navbar-toggler"
@@ -52,7 +52,10 @@
               />
             </span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div
+            class="collapse navbar-collapse no-transition"
+            id="navbarNavAltMarkup"
+          >
             <div class="navbar-nav">
               <a class="nav-link about" href="#">About</a>
               <a class="nav-link services" href="#">Services</a>
@@ -117,75 +120,63 @@
       <div class="container-fluid card">
         <div class="card-info">
           <div class="card-heading">Client testimonials</div>
-          <div class="card">
-            <img
-              src="./images/image-emily.jpg"
-              class="card-img-top"
-              alt="image of emily"
-            />
-            <div class="card-body">
-              <p class="card-text">
-                We put our trust in Sunnyside and they delivered, making sure
-                our needs were met and deadlines were always hit.
-              </p>
-              <div class="name">Emily R.</div>
-              <div class="occupation">Marketing Director</div>
+          <div class="card-client">
+            <div class="card">
+              <img
+                src="./images/image-emily.jpg"
+                class="card-img-top"
+                alt="image of emily"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  We put our trust in Sunnyside and they delivered, making sure
+                  our needs were met and deadlines were always hit.
+                </p>
+                <div class="name">Emily R.</div>
+                <div class="occupation">Marketing Director</div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/image-thomas.jpg"
-              class="card-img-top"
-              alt="image of thomas"
-            />
-            <div class="card-body">
-              <p class="card-text">
-                Sunnyside’s enthusiasm coupled with their keen interest in our
-                brand’s success made it a satisfying and enjoyable experience.
-              </p>
-              <div class="name">Thomas S.</div>
-              <div class="occupation">Chief Operating Officer</div>
+            <div class="card">
+              <img
+                src="./images/image-thomas.jpg"
+                class="card-img-top"
+                alt="image of thomas"
+              />
+              <div class="card-body">
+                <p class="card-text middle">
+                  Sunnyside’s enthusiasm coupled with their keen interest in our
+                  brand’s success made it a satisfying and enjoyable experience.
+                </p>
+                <div class="name">Thomas S.</div>
+                <div class="occupation">Chief Operating Officer</div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <img
-              src="./images/image-jennie.jpg"
-              class="card-img-top"
-              alt="image of jennie"
-            />
-            <div class="card-body">
-              <p class="card-text">
-                Incredible end result! Our sales increased over 400% when we
-                worked with Sunnyside. Highly recommended!
-              </p>
-              <div class="name">Jennie F.</div>
-              <div class="occupation">Business Owner</div>
+            <div class="card">
+              <img
+                src="./images/image-jennie.jpg"
+                class="card-img-top"
+                alt="image of jennie"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Incredible end result! Our sales increased over 400% when we
+                  worked with Sunnyside. Highly recommended!
+                </p>
+                <div class="name">Jennie F.</div>
+                <div class="occupation">Business Owner</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- image -->
-      <div class="image-card">
-        <img
-          src="./images/mobile/image-gallery-milkbottles.jpg"
-          class="image-card-food"
-          alt="milk"
-        />
-        <img
-          src="./images/mobile/image-gallery-orange.jpg"
-          class="image-card-food"
-          alt="orange"
-        />
-        <img
-          src="./images/mobile/image-gallery-cone.jpg"
-          class="image-card-food"
-          alt="cone"
-        />
-        <img
-          src="./images/mobile/image-gallery-sugar-cubes.jpg"
-          class="image-card-food"
-          alt="sugar"
-        />
+      <div class="container-fluid">
+        <div class="image-card">
+          <div class="image-card-food milkbottles"></div>
+          <div class="image-card-food orange"></div>
+          <div class="image-card-food cone"></div>
+          <div class="image-card-food sugar"></div>
+        </div>
       </div>
       <!-- footer -->
       <div class="container-fluid footer">
