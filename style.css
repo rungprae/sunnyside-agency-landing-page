@@ -120,8 +120,8 @@ body {
   height: 115px;
   margin-top: 58px;
 }
-
 /* information */
+
 .col-12.info.image.egg {
   padding: 0;
   background-image: url(./images/mobile/image-transform.jpg);
@@ -275,7 +275,7 @@ body {
   font-size: 18px;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-  color: hsl(213, 9%, 39%);
+  color: hsl(232, 10%, 55%);
   margin: 35px 0 0;
 }
 .name {
@@ -288,37 +288,34 @@ body {
   font-size: 12px;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-  color: hsl(232, 10%, 55%);
+  color: hsl(210, 4%, 67%);
   margin-top: 16px;
 }
 /* image */
-.image-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.image-card-food {
+  padding-top: 100%;
 }
 .image-card-food.milkbottles {
   background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
-  width: 187.5px;
-  height: 188px;
   background-size: cover;
 }
 .image-card-food.orange {
   background-image: url(./images/mobile/image-gallery-orange.jpg);
-  width: 187.5px;
-  height: 188px;
+
   background-size: cover;
 }
 .image-card-food.cone {
   background-image: url(./images/mobile/image-gallery-cone.jpg);
-  width: 187.5px;
-  height: 188px;
+
   background-size: cover;
 }
 .image-card-food.sugar {
   background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
-  width: 187.5px;
-  height: 188px;
+
   background-size: cover;
 }
 /* footer */
@@ -471,9 +468,12 @@ body {
     background-image: url(./images/desktop/image-header.jpg);
     width: 100%;
     height: 800px;
-    background-size: 100% 100%;
+    background-size: contain;
     display: flex;
+    background-repeat: no-repeat;
     justify-content: flex-start;
+    background-position: center;
+    background-color: #3fbeff;
   }
   .branding {
     font-size: 40px;
@@ -484,71 +484,60 @@ body {
   }
   /* information */
   .row.align-items-start.info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
   .row.info {
     margin: 0;
   }
   .col-xl-6.info.image.egg {
-    padding: 0;
     background-image: url(./images/desktop/image-transform.jpg);
-    width: 50%;
-    height: 600px;
-    background-size: 100% 100%;
+    padding-top: 83.334%;
+    background-size: 100%;
     background-repeat: no-repeat;
     order: 2;
   }
+  .col-xl-6 {
+    width: auto;
+  }
   .col-xl-6.info.transform {
     order: 1;
-    width: 50%;
-    height: 600px;
   }
 
   .col-xl-6.info.stand-out {
     order: 4;
-    width: 50%;
-    height: 600px;
   }
   .col-xl-6.info.image.cup {
     padding: 0;
     background-image: url(./images/desktop/image-stand-out.jpg);
-    width: 50%;
-    height: 600px;
-    background-size: 100% 100%;
+    padding-top: 83.334%;
+    background-size: 100%;
     background-repeat: no-repeat;
     order: 3;
-  }
-  .col-xl-6.info {
-    width: 720px;
-    height: 600px;
   }
   .info-heading.transform {
     font-size: 30px;
     padding: 0 80px 0 0;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
     text-align: left;
   }
   .info-heading.stand-out {
     font-size: 30px;
     padding: 0 80px 0 0;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
     text-align: left;
-  }
-  .info-heading.stand-out {
-    padding: 0;
   }
   .col-xl-6.info {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0 115px 0 195px;
+    padding: 165px 145px 155px 165px;
   }
   .info-content {
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
+    max-width: 650px;
   }
   .btn.transform {
     right: -1%;
@@ -557,7 +546,6 @@ body {
     right: -1%;
   }
   .col-xl-6.info.bg {
-    padding: 0 190px 60px;
     display: flex;
   }
   .info-heading.bg-color {
@@ -565,37 +553,45 @@ body {
   }
   .info-content.photography {
     text-align: center;
+    margin-bottom: 62px;
+    padding: 0 20px;
   }
   .info-content.graphic {
     text-align: center;
+    margin-bottom: 62px;
+    padding: 0 35px;
   }
   .col-xl-6.graphic {
     background-image: url(./images/desktop/image-graphic-design.jpg);
-    width: 50%;
-    height: 600px;
-    background-size: 100% 100%;
+    padding-top: 83.334%;
+    background-size: 100%;
     background-repeat: no-repeat;
     color: hsl(167, 40%, 24%);
     order: 5;
+    padding-bottom: 0;
   }
   .col-xl-6.photography {
     background-image: url(./images/desktop/image-photography.jpg);
-    width: 50%;
-    height: 600px;
-    background-size: 100% 100%;
+    padding-top: 83.334%;
+    background-size: 100%;
     background-repeat: no-repeat;
     color: hsl(198, 62%, 26%);
     order: 6;
+    padding-bottom: 0;
   }
+
   /* card */
+  .card {
+    padding: 0 5px;
+  }
+  .container-fluid.card {
+    max-width: 2000px;
+  }
   .card-client {
     display: flex;
   }
-  .card {
-    padding: 0 20px 0 0;
-  }
   .card-text.middle {
-    padding: 0 38px 0;
+    padding: 0 45px;
   }
   .card-info {
     padding: 162px 120px 162px;
@@ -612,32 +608,28 @@ body {
 }
 /* image-card */
 @media (min-width: 1440px) {
-  .image-card {
-    width: 100%;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .image-card-food {
+    padding-top: 124.17%;
   }
   .image-card-food.milkbottles {
     background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
-    width: 25%;
-    height: 447px;
-    background-size: 100% 100%;
+    background-position: center;
   }
   .image-card-food.orange {
     background-image: url(./images/desktop/image-gallery-orange.jpg);
-    width: 25%;
-    height: 447px;
-    background-size: 100% 100%;
+    background-position: center;
   }
   .image-card-food.cone {
     background-image: url(./images/desktop/image-gallery-cone.jpg);
-    width: 25%;
-    height: 447px;
-    background-size: 100% 100%;
+    background-position: center;
   }
   .image-card-food.sugar {
     background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
-    width: 25%;
-    height: 447px;
-    background-size: 100% 100%;
+    background-position: center;
   }
   /* footer */
   .more-info.services {
