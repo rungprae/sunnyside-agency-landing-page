@@ -24,6 +24,8 @@ body {
   background-color: hsl(0, 0%, 100%);
   background-size: 330px 305px;
   position: relative;
+  max-width: 768px;
+  margin-left: auto;
 }
 .show .navbar-nav:before {
   position: absolute;
@@ -95,15 +97,21 @@ body {
 
 /* branding */
 .container-fluid.branding {
-  background-image: url(./images/mobile/image-header.jpg);
+  background-image: url(./images/desktop/image-header.jpg);
   width: 100%;
   height: 538px;
   background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #3fbeff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.sunnyside-brand {
+  padding-bottom: 60px;
 }
 .branding {
   margin: 0;
@@ -116,30 +124,38 @@ body {
   padding: 0 30px;
 }
 .arrow-down {
-  width: 38px;
+  width: 36px;
   height: 115px;
-  margin-top: 58px;
+  margin-top: 55px;
 }
 /* information */
-
+.container-fluid.information {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+}
+.row.info {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 .col-12.info.image.egg {
-  padding: 0;
+  padding: 83.2% 0 0;
   background-image: url(./images/mobile/image-transform.jpg);
-  height: 312px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .col-12.info.image.cup {
-  padding: 0;
+  padding: 83.2% 0 0;
   background-image: url(./images/mobile/image-stand-out.jpg);
-  height: 312px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .col-12.info {
-  padding: 72px 56px 65px;
+  padding: 72px 45px 65px;
   text-align: center;
 }
 .col-12.transform {
@@ -214,7 +230,6 @@ body {
   top: 60%;
 }
 .col-12.info.bg {
-  height: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -222,33 +237,35 @@ body {
 }
 .col-12.graphic {
   background-image: url(./images/mobile/image-graphic-design.jpg);
+  padding: 160% 0 0;
   width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   color: hsl(167, 40%, 24%);
-  padding: 0 24px 62px;
+  position: relative;
 }
-.info-content.graphic {
+.info-content.graphic-photo {
   margin-bottom: 0;
 }
 .col-12.photography {
   background-image: url(./images/mobile/image-photography.jpg);
+  padding: 160% 0 0;
   width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   color: hsl(198, 62%, 26%);
-  padding: 0 24px 62px;
+  position: relative;
 }
-.info-content.photography {
-  margin-bottom: 0;
+.section-graphic-photo {
+  position: absolute;
+  padding: 0 20px 63px;
 }
+
 /* card */
 .card-info {
   padding: 65px 24px 90px;
 }
-.card-heading {
+.section-heading {
   text-align: center;
   font-family: "Fraunces", serif;
   font-size: 18px;
@@ -277,6 +294,7 @@ body {
   font-weight: 600;
   color: hsl(232, 10%, 55%);
   margin: 35px 0 0;
+  max-width: 600px;
 }
 .name {
   font-size: 15px;
@@ -366,8 +384,8 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
-/* desktop */
-@media (min-width: 1440px) {
+/* desktop 1440px*/
+@media (min-width: 1400px) {
   /* navbar */
   .fixed-top {
     top: 0;
@@ -386,7 +404,7 @@ body {
     align-items: center;
     background-color: transparent;
   }
-  .navbar-nav:before {
+  .show .navbar-nav:before {
     display: none;
   }
   .nav-link {
@@ -472,7 +490,7 @@ body {
     display: flex;
     background-repeat: no-repeat;
     justify-content: flex-start;
-    background-position: center;
+    background-position: bottom;
     background-color: #3fbeff;
   }
   .branding {
@@ -532,12 +550,12 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 165px 145px 155px 165px;
+    padding: 165px 145px 0 165px;
   }
   .info-content {
     text-align: left;
     margin-bottom: 47px;
-    max-width: 650px;
+    max-width: 430px;
   }
   .btn.transform {
     right: -1%;
@@ -551,47 +569,44 @@ body {
   .info-heading.bg-color {
     padding: 0;
   }
-  .info-content.photography {
+  .info-content.graphic-photo {
     text-align: center;
-    margin-bottom: 62px;
-    padding: 0 20px;
-  }
-  .info-content.graphic {
-    text-align: center;
-    margin-bottom: 62px;
     padding: 0 35px;
   }
-  .col-xl-6.graphic {
+
+  .col-xl-6.info.graphic {
     background-image: url(./images/desktop/image-graphic-design.jpg);
-    padding-top: 83.334%;
+    padding: 83.334% 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
     color: hsl(167, 40%, 24%);
     order: 5;
-    padding-bottom: 0;
   }
-  .col-xl-6.photography {
+  .col-xl-6.info.photography {
     background-image: url(./images/desktop/image-photography.jpg);
-    padding-top: 83.334%;
+    padding: 83.334% 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
     color: hsl(198, 62%, 26%);
     order: 6;
     padding-bottom: 0;
   }
-
+  .section-graphic-photo {
+    padding: 0 150px 60px;
+    max-width: 800px;
+  }
   /* card */
   .card {
-    padding: 0 5px;
+    padding: 0 17px;
   }
   .container-fluid.card {
     max-width: 2000px;
   }
-  .card-client {
+  .clients {
     display: flex;
   }
   .card-text.middle {
-    padding: 0 45px;
+    padding: 0 2px;
   }
   .card-info {
     padding: 162px 120px 162px;
@@ -607,7 +622,7 @@ body {
   }
 }
 /* image-card */
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 25%);
